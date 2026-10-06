@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav>
+        <a href="../">Home</a>
+        <a href="../projects/">Projects</a>
+        <a href="../contact/">Contact</a>
+        <a href="../resume/">Resume</a>
+        <a href="https://github.com/carmenwu0520" target="_blank">GitHub</a>
+    </nav>
+
+    <h1>Jiamin (Carmen) Wu</h1>
+    <p><a href="https://www.linkedin.com/in/jiamin0520" target="_blank">LinkedIn</a></p>
+
+    <section>
+        <h2>Summary</h2>
+        <p>Data analyst who uses Excel, SQL, and Python to monitor quality and operational data, trace root causes, and
+            turn findings into process changes. Former Quality Control Analyst in food manufacturing (CCP, sanitation,
+            and allergen audits; SOP writing). Built a PySpark pipeline over 67M Census records and compared TF-IDF,
+            DistilBERT, and LLM prompting for text classification. Native English, Mandarin, and Cantonese.</p>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <article>
+            <header>
+                <h3>M.S. Data Science, UC San Diego</h3>
+                <p>Expected <time datetime="2027-03">03/2027</time></p>
+            </header>
+            <p>GPA 3.88. Coursework: Machine Learning, NLP, Big Data (Spark), Data Management (SQL); AI Engineering
+                (CodePath).</p>
+        </article>
+        <article>
+            <header>
+                <h3>B.A. Applied Mathematics, UC Berkeley</h3>
+                <p><time datetime="2025-05">05/2025</time></p>
+            </header>
+            <p>Coursework: Mathematical Optimization, Numerical Analysis, Mathematical Economics. Certificate: Berkeley
+                Changemaker (AI Applications and Innovation).</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        <article>
+            <header>
+                <h3>Income Prediction on 67M Census Records with Apache Spark (DSC 232R)</h3>
+                <p><time datetime="2026-04">04/2026</time> to <time datetime="2026-05">05/2026</time></p>
+            </header>
+            <ul>
+                <li>Cleaned and encoded 67M IPUMS Census records in PySpark, engineered features, and trained a Random
+                    Forest model.</li>
+                <li>Tuned hyperparameters and benchmarked a PCA variant (R² ≈ 0.25, MAE ≈ $15K); cut training from 2.1
+                    hours to 17 minutes on seven executors.</li>
+                <li><a href="https://github.com/carmenwu0520/dsc232r-group-project" target="_blank">Project
+                        repository</a></li>
+            </ul>
+        </article>
+        <article>
+            <header>
+                <h3>Financial Complaint Classification: TF-IDF vs. DistilBERT vs. LLM Prompting (CFPB data)</h3>
+                <p><time datetime="2026-09">09/2026</time></p>
+            </header>
+            <ul>
+                <li>Fine-tuned DistilBERT on 45K CFPB complaints (9 classes); macro-F1 0.752 vs. 0.748 for TF-IDF.</li>
+                <li>Benchmarked zero-shot and few-shot Claude prompts against the fine-tuned model on F1 and cost.</li>
+                <li><a href="https://github.com/carmenwu0520/cfpb-complaint-nlp" target="_blank">Project repository</a>
+                </li>
+            </ul>
+        </article>
+        <article>
+            <header>
+                <h3>College Outcomes Dashboard (Tableau Public)</h3>
+                <p><time datetime="2026-07">07/2026</time></p>
+            </header>
+            <ul>
+                <li>Linked two U.S. College Scorecard datasets (6,273 institutions, 63,888 programs) into a six-view
+                    dashboard on earnings, graduation rates by sector, and a California ROI ranking.</li>
+                <li><a href="https://public.tableau.com/app/profile/jiamin.wu" target="_blank">Tableau Public
+                        profile</a></li>
+            </ul>
+        </article>
+    </section>
+
+    <section>
+        <h2>Experience</h2>
+        <article>
+            <header>
+                <h3>Business Operations Coordinator &amp; Math Instructor, Think Academy U.S.</h3>
+                <p><time datetime="2025-11">11/2025</time> to <time datetime="2026-05">05/2026</time></p>
+            </header>
+            <ul>
+                <li>Tracked attendance and score KPIs for 1,000 students in 18 weekly sections vs. quarterly OKRs in
+                    Excel; found the weakest unit and time slot, and pacing fixes that followed raised scores (70%
+                    retention).</li>
+                <li>A/B tested AI-built quiz tools and a new pacing plan across class sections (6+ per group): scores
+                    and renewals rose and both rolled out; analyzed 200+ bilingual parent and student survey responses.
+                </li>
+            </ul>
+        </article>
+        <article>
+            <header>
+                <h3>Program Coordinator, East Bay Consortium (Cal-SOAP)</h3>
+                <p><time datetime="2023-06">06/2023</time> to <time datetime="2023-07">07/2023</time></p>
+            </header>
+            <ul>
+                <li>Ran bilingual pre/post surveys for a ~100-student program; analyzed results and reported outcomes.
+                </li>
+            </ul>
+        </article>
+        <article>
+            <header>
+                <h3>STEM Program Assistant &amp; Math Tutor, STEM Center, Chabot College</h3>
+                <p><time datetime="2022-01">01/2022</time> to <time datetime="2023-05">05/2023</time></p>
+            </header>
+            <ul>
+                <li>Advised students on UC transfer requirements and school choice; tutored linear algebra and calculus.
+                </li>
+            </ul>
+        </article>
+        <article>
+            <header>
+                <h3>Program Specialist, Chabot College (MESA-TRIO Program)</h3>
+                <p><time datetime="2022-06">06/2022</time> to <time datetime="2022-07">07/2022</time></p>
+            </header>
+            <ul>
+                <li>Researched student and family needs and partner sites; presented findings that guided outreach.</li>
+            </ul>
+        </article>
+        <article>
+            <header>
+                <h3>Data &amp; Records Assistant, Office of Student Life, Chabot College (CLPCCD)</h3>
+                <p><time datetime="2021-06">06/2021</time> to <time datetime="2022-04">04/2022</time></p>
+            </header>
+            <ul>
+                <li>Queried and quality-checked student records under FERPA for research reports and funding proposals.
+                </li>
+            </ul>
+        </article>
+        <article>
+            <header>
+                <h3>Quality Control Analyst, Creative Energy Foods, Inc.</h3>
+                <p><time datetime="2019-08">08/2019</time> to <time datetime="2020-04">04/2020</time></p>
+            </header>
+            <ul>
+                <li>Monitored Excel quality logs across CCP, sanitation, and allergen audits, flagging trends for
+                    follow-up.</li>
+                <li>Wrote and updated product SOPs to standardize quality and compliance checks.</li>
+            </ul>
+        </article>
+    </section>
+
+    <section>
+        <h2>Awards and Leadership</h2>
+        <ul>
+            <li>Named Award: Chabot College named its annual award the Jiamin (Carmen) Wu Community Award (May 2026).
+            </li>
+            <li>Awards:
+                <ul>
+                    <li>UC Berkeley The Achievement Award (2023 to 2025)</li>
+                    <li>SSCC President's Award for Student Leadership (2023)</li>
+                    <li>Edward E. &amp; Donna L. Martins Student Scholarship (2022 and 2024)</li>
+                    <li>Mark L. Eisenberg Scholarship (2023)</li>
+                    <li>STEM-Mesa High Honor Student Award (2023)</li>
+                    <li>Hartman Family "Phoenix Rising" Future Teacher Scholarship (2023)</li>
+                    <li>EOPS/CARE Certificate of Achievement, Academic Success (2023)</li>
+                    <li>Learning Connection Certificate of Appreciation (2023)</li>
+                </ul>
+            </li>
+            <li>Leadership: Co-Founder, Asian Pacific Islander Education Association; Finance Officer, Chinese Student
+                Association.</li>
+        </ul>
+    </section>
+</body>
+
+</html>
