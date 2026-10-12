@@ -125,3 +125,23 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
 }
+/* ---------- Home page: smaller photo next to the intro ---------- */
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2em;
+
+  img {
+    width: 16em;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 1em;
+  }
+
+  p {
+    flex: 1;
+    min-width: 15em;
+    font-size: 1.25em;
+  }
+}
