@@ -129,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
 .intro {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: start;
   gap: 2em;
 
   img {
@@ -139,9 +139,13 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 1em;
   }
 
-  p {
+  .bio {
     flex: 1;
     min-width: 15em;
-    font-size: 1.25em;
+    font-size: 1.1em;
+
+    p:first-child {
+      margin-top: 0;
+    }
   }
 }
