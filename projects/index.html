@@ -9,11 +9,33 @@
 <body>
     <nav>
         <a href="../">Home</a>
-        <a href="../projects/">Projects</a>
+        <a href="../projects/" class="current">Projects</a>
         <a href="../contact/">Contact</a>
         <a href="../resume/">Resume</a>
         <a href="https://github.com/carmenwu0520" target="_blank">GitHub</a>
     </nav>
     <h1>Projects</h1>
+   <div class="projects">
+       <article>
+           <h2>Grocery Store Food Processing (DSC 209R)</h2>
+           <img src="../images/grocery-processing.png" alt="Dot plot comparing how processed foods are at Whole Foods, Target, and Walmart by aisle">
+           <p>Expository visualization of 26K grocery items. Aisle by aisle, Whole Foods' items are less processed than Target's and Walmart's in 21 of 28 categories. Built in Python with matplotlib.</p>
+       </article>
+       <article>
+           <h2>Income Prediction on 67M Census Records</h2>
+           <img src="../images/census-income.png" alt="Title card for the U.S. Census income and education analysis, 67M IPUMS records with Apache Spark">
+           <p>Cleaned 67M IPUMS records in PySpark and trained a Random Forest model; cut training time from 2.1 hours to 17 minutes. <a href="https://github.com/carmenwu0520/dsc232r-group-project" target="_blank">Repo</a></p>
+       </article>
+       <article>
+           <h2>Financial Complaint Classification</h2>
+           <img src="../images/cfpb-nlp.png" alt="GitHub repository card for cfpb-complaint-nlp: TF-IDF vs DistilBERT vs Claude prompting">
+           <p>Compared TF-IDF, fine-tuned DistilBERT, and LLM prompting on 45K CFPB complaints across 9 classes (macro-F1 0.752). <a href="https://github.com/carmenwu0520/cfpb-complaint-nlp" target="_blank">Repo</a></p>
+       </article>
+       <article>
+           <h2>College Outcomes Dashboard</h2>
+           <img src="../images/college-dashboard.png" alt="Tableau dashboard showing highest-earning fields of study and a California college ROI ranking">
+           <p>Six-view Tableau dashboard linking College Scorecard data on 6,273 institutions: earnings, graduation rates, and a California ROI ranking. <a href="https://public.tableau.com/app/profile/jiamin.wu" target="_blank">Tableau Public</a></p>
+       </article>
+   </div>
 </body>
 </html>
