@@ -1,0 +1,78 @@
+[
+  {
+    "title": "Grocery Store Food Processing (DSC 209R)",
+    "year": "2026",
+    "image": "images/grocery-processing.png",
+    "description": "Expository visualization of 26K grocery items. Aisle by aisle, Whole Foods' items are less processed than Target's and Walmart's in 21 of 28 categories. Built in Python with matplotlib."
+  },
+  {
+    "title": "Financial Complaint Classification",
+    "year": "2026",
+    "image": "images/cfpb-nlp.png",
+    "description": "Compared TF-IDF, fine-tuned DistilBERT, and LLM prompting on 45K CFPB complaints across 9 classes (macro-F1 0.752).",
+    "url": "https://github.com/carmenwu0520/cfpb-complaint-nlp"
+  },
+  {
+    "title": "College Outcomes Dashboard",
+    "year": "2026",
+    "image": "images/college-dashboard.png",
+    "description": "Six-view Tableau dashboard linking College Scorecard data on 6,273 institutions: earnings, graduation rates, and a California ROI ranking.",
+    "url": "https://public.tableau.com/app/profile/jiamin.wu"
+  },
+  {
+    "title": "Income Prediction on 67M Census Records",
+    "year": "2026",
+    "image": "images/census-income.png",
+    "description": "Cleaned 67M IPUMS records in PySpark and trained a Random Forest model; cut training time from 2.1 hours to 17 minutes.",
+    "url": "https://github.com/carmenwu0520/dsc232r-group-project"
+  },
+  {
+    "title": "Personal Portfolio Website (DSC 209R Labs)",
+    "year": "2026",
+    "image": "images/me.jpg",
+    "description": "This site. Hand-written HTML and CSS, a JavaScript-generated nav and dark mode, and projects rendered from a JSON data file.",
+    "url": "https://github.com/carmenwu0520/portfolio"
+  },
+  {
+    "title": "Interactive Visualization (DSC 209R Project 3)",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Coming soon: an interactive D3 visualization for DSC 209R."
+  },
+  {
+    "title": "Persuasive vs. Deceptive Visualization (DSC 209R Project 2)",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Coming soon: a pair of charts showing how design choices can inform or mislead with the same data."
+  },
+  {
+    "title": "Class KPI Tracking and A/B Tests (Think Academy)",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Tracked attendance and score KPIs for 1,000 students in Excel and A/B tested AI-built quiz tools and a new pacing plan across class sections; both rolled out."
+  },
+  {
+    "title": "Bilingual Program Survey Analysis (Cal-SOAP)",
+    "year": "2023",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Ran bilingual pre/post surveys for a ~100-student program, analyzed the results, and reported outcomes."
+  },
+  {
+    "title": "Student and Family Needs Research (MESA-TRIO)",
+    "year": "2022",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Researched student and family needs and partner sites, then presented findings that guided outreach."
+  },
+  {
+    "title": "Student Records Quality Checks (Chabot College)",
+    "year": "2021",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Queried and quality-checked student records under FERPA for research reports and funding proposals."
+  },
+  {
+    "title": "Food Safety Quality Monitoring (Creative Energy Foods)",
+    "year": "2019",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Monitored Excel quality logs across CCP, sanitation, and allergen audits, flagged trends for follow-up, and wrote product SOPs."
+  }
+]

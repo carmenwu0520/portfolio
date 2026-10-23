@@ -78,7 +78,7 @@ form {
     grid-row: span 3;
   }
 
-  h2 {
+  h2, h3 {
     margin: 0;
   }
 
@@ -159,5 +159,34 @@ h1, h2, h3, h4, h5, h6 {
     p:first-child {
       margin-top: 0;
     }
+  }
+}
+
+/* ---------- Lab 4: GitHub stats on the home page ---------- */
+#profile-stats {
+  margin-block: 2em;
+
+  dl {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    margin: 0;
+    padding: 1em;
+    border: 1px solid oklch(50% 10% 200 / 40%);
+    border-radius: 0.5em;
+  }
+
+  dt {
+    grid-row: 1;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    color: gray;
+  }
+
+  dd {
+    grid-row: 2;
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
   }
 }

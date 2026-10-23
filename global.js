@@ -105,3 +105,83 @@ form?.addEventListener('submit', function (event) {
   let url = form.action + '?' + params.join('&');
   location.href = url;
 });
+
+// =====================================================================
+// Lab 4: load project data and render it with reusable functions
+// =====================================================================
+
+// ---------- Step 1.2: fetch and parse a JSON file ----------
+export async function fetchJSON(url) {
+  try {
+    // Fetch the JSON file from the given URL
+    const response = await fetch(url);
+    console.log(response); // inspect the Response object in DevTools
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch projects: ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching or parsing JSON data:', error);
+  }
+}
+
+// ---------- Step 1.4: render an array of projects into a container ----------
+const VALID_HEADINGS = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+const PLACEHOLDER_IMAGE = 'https://dsc106.com/labs/lab02/images/empty.svg';
+
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+  // Check Your Understanding: what if containerElement is null?
+  if (!(containerElement instanceof Element)) {
+    console.error('renderProjects: containerElement is not a valid DOM element');
+    return;
+  }
+
+  // Challenge: only allow real heading tags, fall back to h2 otherwise
+  if (!VALID_HEADINGS.includes(headingLevel)) {
+    console.warn(`renderProjects: "${headingLevel}" is not a heading tag, using h2`);
+    headingLevel = 'h2';
+  }
+
+  // Think About It: clear first so calling this twice doesn't duplicate articles
+  containerElement.innerHTML = '';
+
+  // Check Your Understanding: show a placeholder for an empty (or missing) array
+  if (!Array.isArray(projects) || projects.length === 0) {
+    containerElement.innerHTML = '<p>No projects to show yet.</p>';
+    return;
+  }
+
+  for (const project of projects) {
+    const article = document.createElement('article');
+
+    // Think About It: handle missing properties gracefully
+    const title = project.title ?? 'Untitled project';
+    const description = project.description ?? '';
+    const link = project.url
+      ? ` <a href="${project.url}" target="_blank">View project</a>`
+      : '';
+
+    // Images in projects.json are written relative to the site root
+    // (e.g. "images/me.jpg"), so they work from every page.
+    let image = project.image || PLACEHOLDER_IMAGE;
+    if (!image.startsWith('http')) {
+      image = BASE_PATH + image;
+    }
+
+    article.innerHTML = `
+      <${headingLevel}>${title}</${headingLevel}>
+      <img src="${image}" alt="${title}">
+      <p>${description}${link}</p>
+    `;
+
+    containerElement.appendChild(article);
+  }
+}
+
+// ---------- Step 3.2: load public profile data from the GitHub API ----------
+export async function fetchGitHubData(username) {
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}
