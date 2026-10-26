@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project 2: Persuasive or Deceptive Visualization? | Jiamin Wu</title>
+    <style>
+      :root {
+        --color-neutral-95: hsl(220 10% 95%);
+        --color-neutral-90: hsl(220 10% 90%);
+        --color-neutral-80: hsl(220 10% 80%);
+        --color-neutral-70: hsl(220 10% 70%);
+        --color-neutral-60: hsl(220 10% 60%);
+        --color-neutral-50: hsl(220 10% 50%);
+        --color-neutral-40: hsl(220 10% 40%);
+        --color-neutral-30: hsl(220 10% 30%);
+        --color-neutral-20: hsl(220 10% 20%);
+        --color-neutral-10: hsl(220 10% 10%);
+      }
+
+      html {
+        font: 100%/1.5 system-ui;
+        counter-reset: figure;
+        background: var(--color-neutral-95);
+        max-width: min(75vw, 80em);
+        margin: 0 auto;
+      }
+
+      /* Headings */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        line-height: 1.1;
+        font-weight: 600;
+        text-wrap: balance;
+      }
+
+      h1,
+      h2 {
+        border-bottom: 1px solid var(--color-neutral-80);
+        padding-bottom: 0.2em;
+      }
+
+      h1 {
+        margin-block: 1em 0.5rem;
+        font-size: clamp(2.5em, 150% + 2vh + 2vw, 10vmin);
+        font-weight: 800;
+
+        small {
+          display: block;
+          width: fit-content;
+          padding: 0.2em 0.5em;
+          margin-inline: auto;
+          color: white;
+          background: var(--color-neutral-40);
+          font-size: 40%;
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
+      }
+
+      h2 {
+        font-size: 180%;
+        color: var(--color-neutral-30);
+      }
+
+      h3 {
+        font-size: 130%;
+      }
+
+      /* Lists */
+
+      ul,
+      ol {
+        padding-inline-start: 2em;
+      }
+
+      li {
+        &::marker {
+          color: var(--color-neutral-40);
+        }
+
+        + li {
+          margin-top: 0.2em;
+        }
+      }
+
+      /* Sectioning elements */
+
+      header {
+        padding-block: 1em;
+        text-align: center;
+      }
+
+      main {
+        background: white;
+        color: var(--color-neutral-20);
+        border-radius: 1rem;
+        padding: 0.1rem 2rem;
+      }
+
+      /* Figures */
+
+      figure {
+        margin: 1em 0;
+        padding: 0.5rem;
+        margin-inline: -0.5em;
+        border: 1px solid var(--color-neutral-80);
+        box-shadow: 0 0.1em 0.2em var(--color-neutral-95);
+        text-align: center;
+        background: white;
+
+        > figcaption {
+          font: 500 75% var(--font-sans);
+          background: var(--color-neutral-95);
+          padding: 0.5rem;
+          margin: -0.5rem;
+          margin-top: 0.5rem;
+          counter-increment: figure;
+          text-align: left;
+
+          &::before {
+            content: 'Figure ' counter(figure) ': ';
+            font-weight: bold;
+            color: var(--color-neutral-40);
+          }
+
+          a:not(:hover, :focus, :active) {
+            color: inherit;
+            text-decoration: underline;
+            text-decoration-color: color-mix(
+              in lab,
+              currentColor,
+              transparent 70%
+            );
+          }
+        }
+      }
+    
+      /* ---- additions ---- */
+      figure img { max-width: 100%; height: auto; }
+      .score { display:inline-block; min-width:3.2em; padding:0 0.4em; margin-right:0.3em; border-radius:0.3em;
+               font: 700 85% system-ui; text-align:center; color:white; }
+      .s-neg { background: hsl(5 60% 45%); }
+      .s-pos { background: hsl(150 45% 35%); }
+      .s-mid { background: var(--color-neutral-50); }
+      .decisions li { margin-bottom: 0.8em; }
+      .legend { font-size: 90%; color: var(--color-neutral-40); }
+      .back { display:block; margin-top:1em; font-size:90%; }
+      .todo { background: hsl(50 100% 90%); border: 2px dashed hsl(40 90% 45%); padding: 1em; border-radius: 0.5em; }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <small>DSC 209R · Project 2</small>
+        Persuasive or Deceptive Visualization?
+      </h1>
+      <p><strong>Jiamin (Carmen) Wu</strong> — <em>jiw294@ucsd.edu</em></p>
+    </header>
+
+    <main>
+      <h2>Proposition: China is now the country most responsible for climate change.</h2>
+      <p>Data: World Bank, World Development Indicators, climate-change file (CO₂ emissions in kilotons and metric tons per capita, 1960–2018). Both sides use the same dataset; each side is one visualization made of two charts.</p>
+      <p class="legend">Each design decision is scored from <span class="score s-neg">−2</span> (fully deceptive) to <span class="score s-pos">+2</span> (fully earnest).</p>
+
+      <section>
+        <h3>FOR the Proposition</h3>
+
+        <figure>
+          <img src="for-1-annual-emissions.png" alt="Line chart of annual CO2 emissions from 1990 to 2018. China's red line rises from about 2 to over 10 billion tonnes, passing the United States in 2005 and a dashed U.S. plus EU combined line around 2010." />
+          <figcaption>China's annual CO₂ emissions passed the United States in 2005 and the U.S. and EU combined around 2010.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="for-2-new-emissions.png" alt="Bar chart of the change in annual CO2 emissions from 2000 to 2018. China increased by 7.0 billion tonnes, about 65 percent of the world's 10.7 billion tonne increase, while the U.S., EU, U.K. and Japan decreased." />
+          <figcaption>Change in annual CO₂ emissions between 2000 and 2018. China accounts for 65% of the world's increase.</figcaption>
+        </figure>
+
+        <p>Design Decisions and Rationale:</p>
+
+        <ul class="decisions">
+          <li><strong><span class="score s-neg">−1.5</span> Only total emissions, never per person.</strong> Both charts use total CO₂ for each country. China has about 1.4 billion people, so on a per-person basis it is around the middle of the pack, roughly half of the U.S. Leaving per capita out completely is the single biggest thing that makes this side work. I thought about adding a small per-capita note for fairness, but even one number would have weakened the argument, so I left it out. This is a deceptive choice by omission: nothing on the chart is false, but a key piece of context is missing.</li>
+          <li><strong><span class="score s-neg">−1</span> Picking the start years (1990 for the line chart, 2000 for the bar chart).</strong> Figure 1 starts in 1990 and Figure 2 measures change from 2000, right before China's emissions took off after it joined the WTO in 2001. Starting in 2000 also makes the U.S. and EU look like they are fixing the problem with negative bars, when part of that drop is likely manufacturing moving to China. The dataset doesn't measure that kind of 'outsourced' emissions, so I didn't bring it up. I considered using 1960 as the start, but then the U.S. would dominate most of the timeline.</li>
+          <li><strong><span class="score s-pos">+0.5</span> Calculated fields: the 2000→2018 change and the "65%" callout.</strong> Instead of plotting raw values, I calculated each country's change in annual emissions and China's share of the world's total increase (+7.0 of +10.7 billion tonnes = 65%). One big, memorable number is very persuasive, and the math itself is correct and the source line says the values were calculated by me, which is why I scored it slightly earnest. The slant comes from which change I chose to calculate, not from the arithmetic.</li>
+          <li><strong><span class="score s-neg">−0.5</span> A "U.S. + EU combined" reference line, and red for China.</strong> Showing that China passed the U.S. alone is less striking than showing it passed two major economies at once, so I added a dashed U.S. + EU line. China is the only colored mark (red) and everything else is gray. Highlighting one series is a normal, earnest technique for focus, but red also reads as “danger” or “bad,” which quietly adds a judgment. I considered a neutral color like dark blue, but it felt less urgent.</li>
+          <li><strong><span class="score s-pos">+2</span> Honest-looking chart basics.</strong> Both charts start at zero, label lines and bars directly instead of using a legend, cite the World Bank as the source, and use calm, factual titles. I kept these earnest on purpose: they make readers trust the chart, and they mean nothing would look obviously wrong on a first look. I avoided tricks like a truncated y-axis because they are easy to spot and would backfire.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>AGAINST the Proposition</h3>
+
+        <figure>
+          <img src="against-1-cumulative-share.png" alt="Bar chart of each country's share of all CO2 emitted worldwide from 1960 to 2018. United States 22 percent, China 16, European Union 15, Russia 10, Japan 4, India 4, United Kingdom 3." />
+          <figcaption>Share of all CO₂ emitted worldwide from 1960 to 2018. The U.S. has emitted the most in total.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="against-2-per-capita.png" alt="Bar chart of CO2 emissions per person in 2018. United States 15.2 tonnes, Japan 8.7, Germany 8.6, China 7.4, EU 6.4, UK 5.4, world average 4.5, India 1.8." />
+          <figcaption>CO₂ emissions per person in 2018. The average American emits about twice as much as the average person in China.</figcaption>
+        </figure>
+
+        <p>Design Decisions and Rationale:</p>
+
+        <ul class="decisions">
+          <li><strong><span class="score s-pos">+0.5</span> Switching to cumulative emissions, framed as the fair measure.</strong> Figure 3 adds up every year from 1960 to 2018 and shows each country's share of the world total, which puts the U.S. first at 22% and China at 16%. Cumulative emissions are a real and widely used way to measure responsibility, because CO₂ stays in the atmosphere for a very long time. That's why I scored it slightly earnest. But the subtitle “CO₂ stays in the air for centuries” is also there to make this sound like the only fair way to measure it.</li>
+          <li><strong><span class="score s-neg">−1</span> Showing only final totals, not the trend.</strong> The cumulative bar chart shows one number per country and hides time completely. Readers can't see that China now emits about twice as much as the U.S. every year and is catching up quickly. A line of cumulative totals over time would have shown that gap closing, which is exactly why I didn't use one.</li>
+          <li><strong><span class="score s-neg">−2</span> Cherry-picking which countries appear in the per-capita chart.</strong> In Figure 4 I left out Australia (15.5), Canada (15.5) and Saudi Arabia (15.3), which all emit slightly more per person than the U.S. (15.2), as well as South Korea and Russia. Without them, the U.S. looks like the clear #1. This is the most deceptive decision on the page, because the chart looks complete but the comparison set was chosen to produce the answer I wanted.</li>
+          <li><strong><span class="score s-neg">−0.5</span> How countries are grouped.</strong> The EU is shown as one bar, but the U.K. is shown separately. If Europe were one bar it would get much closer to the U.S. in Figure 3. I also had to decide how to label Russia: in this dataset, the years before 1990 cover the whole Soviet Union, which is why Russia's share is 10%. I added an asterisk and a footnote for that, because hiding it would be a real data error and not just framing.</li>
+          <li><strong><span class="score s-pos">+1</span> Context markers: blue highlight, world average, and an annotation.</strong> The U.S. is the only colored bar, in a cooler blue so it doesn't look as alarming as the red on the other side. I added the world average (4.5 tonnes) as a dark reference bar and a callout that the average American emits twice as much as the average person in China (15.2 vs 7.4, which is accurate). The reference bar and the accurate annotation are earnest context, but the callout also points readers to the one comparison that helps my argument.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Final Reflection</h2>
+
+        <p>While exploring the data, I noticed that the same CO₂ dataset gives completely opposite answers depending on which number you look at. In total annual emissions, China is far ahead, but per person or added up since 1960, the U.S. comes out on top. That is why I chose this proposition: both sides could be supported with real numbers. The FOR side was easier to make, because total emissions is the measure most people already assume, so once I showed China’s numbers the reader basically draws the conclusion on their own. The AGAINST side was harder, because I first had to convince the reader that cumulative or per-person emissions is the fairer way to measure responsibility, which is why I added “CO₂ stays in the air for centuries” to the subtitle. The hardest part overall was deciding which countries to include in each chart. Adding or removing a single country could flip the result, and every time I took one out, I had to ask myself whether I was focusing the chart or hiding something.</p>
+        <p>What surprised me most was how little I had to lie. None of the four charts uses a false number, every axis starts at zero, and every chart cites its source. All of the slant comes from which data I picked, which year I started from, and which countries I grouped together. The second surprise was that I almost made a real mistake. When I double-checked the numbers for the final version, I found that in this dataset, Russia’s values before 1990 actually cover the whole Soviet Union, which is why Russia’s cumulative share is as high as 10%. If I had not added a note, that would not have been a persuasive design choice but an actual data error. It made me realize that, to a reader, an intentional choice and an honest mistake can look exactly the same. Finally, I did not expect color to matter this much. Highlighting one country is a normal technique, but China in red looks like an accusation, while the U.S. in a calm blue feels more neutral.</p>
+        <p>After this project, I no longer think a visualization can be completely neutral. Every chart has to choose a measure, a time range, and what to compare against, and each of those choices pushes the reader in some direction. So for me, ethical visualization is not about avoiding persuasion. It is about making sure the reader could still accept my conclusion even if they knew what I left out. The test I came up with is simple: if the reader learned the information I omitted, would their conclusion change? Using cumulative emissions to argue that the U.S. is most responsible passes this test. Even if the reader learns that China now emits more every year, “the U.S. has emitted the most in total” is still true; they just gain another perspective. Leaving Australia, Canada, and Saudi Arabia out of the per-capita chart fails it. Once the reader knows they emit more per person than the U.S., the claim that Americans are the biggest emitters per person is simply no longer true. Some choices fall in between, like measuring change from 2000, so the line is not always clear. But I think the minimum is transparency, such as noting that values were calculated by me and flagging the Soviet Union data, so that readers have a chance to check the claim for themselves.</p>
+      </section>
+
+      <a class="back" href="../">← Back to my portfolio</a>
+    </main>
+  </body>
+</html>

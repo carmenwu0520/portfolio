@@ -42,8 +42,9 @@
   {
     "title": "Persuasive vs. Deceptive Visualization (DSC 209R Project 2)",
     "year": "2026",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "Coming soon: a pair of charts showing how design choices can inform or mislead with the same data."
+    "image": "project2/for-1-annual-emissions.png",
+    "description": "Two opposing charts from the same World Bank CO₂ data: one argues China is most responsible for climate change, the other argues the U.S. is, with every design choice scored from deceptive to earnest.",
+    "url": "https://carmenwu0520.github.io/portfolio/project2/"
   },
   {
     "title": "Class KPI Tracking and A/B Tests (Think Academy)",
