@@ -1,5 +1,12 @@
 [
   {
+    "title": "Bikewatching: Boston Bike Traffic Map (DSC 209R Lab 7)",
+    "year": "2026",
+    "image": "images/bikewatching.jpg",
+    "description": "Interactive Mapbox + D3 map of 260K Bluebikes rides in Boston and Cambridge. Circle area shows station traffic, color shows whether riders are mostly arriving or departing, and a time slider reveals the daily commute pattern.",
+    "url": "https://carmenwu0520.github.io/bikewatching/"
+  },
+  {
     "title": "Grocery Store Food Processing (DSC 209R)",
     "year": "2026",
     "image": "images/grocery-processing.png",
